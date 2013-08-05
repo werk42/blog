@@ -1,1 +1,9 @@
-Hello. This works.
+%h1 Hello. This works.
+- @posts.each do |post|
+  %li 
+    %b Title: 
+    = post.title
+    %b Content:
+    = raw post.body
+    %b Tag:
+    = post.tag
