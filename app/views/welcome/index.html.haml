@@ -1,8 +1,9 @@
-- @posts.each do |post|
-  %li 
-    %b Title: 
-    = post.title
-    %b Content:
-    = raw post.body
-    %b Tag:
-    = post.tag
+.posts-container
+  - @posts.each do |post|
+    %li 
+      %b Title: 
+      = post.title
+      %b Content:
+      = raw post.body
+      %b Tag:
+      = post.tag
