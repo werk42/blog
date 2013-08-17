@@ -12,6 +12,7 @@ gem 'mysql2'
 gem 'sass-rails', '~> 4.0.0'
 gem 'haml-rails'
 gem "compass-rails", "~> 2.0.alpha.0"
+gem "html5-rails"
 
 # ActiveAdmin Hack For Rails 4
 gem 'devise',              github: 'plataformatec/devise' 
