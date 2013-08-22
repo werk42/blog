@@ -1,2 +1,10 @@
 .sidebar
   .sidebar-heading Sidebar
+  - @archived_posts.each do |month, posts|
+    .month= month
+    - posts.each do |post|
+      .title= post.title
+
+
+
+
