@@ -1,5 +1,5 @@
 .posts-container
-  - @posts.each do |post|
+  - @recent_posts.each do |post|
     %li 
       .title= post.title
       .content= raw post.body
