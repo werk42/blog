@@ -1,9 +1,8 @@
 .posts-container
-  .title
-    = @post.title
-  .body
-    = raw @post.body
-  .tag
-    = @post.tag
+  .title= @post.title
+  .content= raw @post.body
+  .date
+    %b published: 
+    = @post.created_at.strftime('%d-%B-%Y')
 
 =render "welcome/sidebar"
