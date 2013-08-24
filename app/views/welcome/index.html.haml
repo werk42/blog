@@ -3,9 +3,8 @@
     %li 
       .title= post.title
       .content= raw post.body
-      .tag 
-        %b category:
-        = post.tag
-      .date= post.created_at  
+      .date
+        %b published: 
+        = post.created_at.strftime('%d-%B-%Y')
 
 =render "sidebar"
