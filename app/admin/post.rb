@@ -3,7 +3,7 @@ ActiveAdmin.register Post do
     f.inputs do
       f.input :title
       f.input :body, as: :html_editor
-      f.input :tags
+      f.input :tag_names
     end
 
     f.buttons
