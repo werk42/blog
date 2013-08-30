@@ -47,11 +47,10 @@ ActiveRecord::Schema.define(version: 20130728200320) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "posts", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "title"
     t.text     "body"
-    t.string   "tag"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
