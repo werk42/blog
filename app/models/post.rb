@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   after_save :assign_tags
 
   
-  has_many :taggings
+  has_many :taggings, :dependent => :destroy
   has_many :tags, :through => :taggings
 
 
