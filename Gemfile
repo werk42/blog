@@ -8,13 +8,15 @@ gem 'rails', '4.0.0'
 
 gem 'mysql2'
 
+gem 'strong_parameters'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'haml-rails'
 gem "compass-rails", "~> 2.0.alpha.0"
 gem "html5-rails"
 
-# ActiveAdmin Hack For Rails 4
+# ActiveAdmin for Rails 4
 gem 'devise',              github: 'plataformatec/devise' 
 gem 'responders',          github: 'plataformatec/responders'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
@@ -26,7 +28,7 @@ gem 'formtastic',          github: 'justinfrench/formtastic'
 
 gem 'active_admin_editor'
 
-# Hack for attr_accessible
+# attr_accessible
 gem 'protected_attributes' 
 
 # Use Uglifier as compressor for JavaScript assets
