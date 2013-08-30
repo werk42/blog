@@ -6,6 +6,8 @@
       .date
         %b published: 
         = post.created_at.strftime('%d-%B-%Y')
-      .tag= post.tag_names
+      .tag
+        %b tags: 
+        = post.tag_names
 
 =render "sidebar"

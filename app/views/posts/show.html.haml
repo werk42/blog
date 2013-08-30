@@ -4,5 +4,8 @@
   .date
     %b published: 
     = @post.created_at.strftime('%d-%B-%Y')
+  .tag
+    %b tags:
+    = @post.tag_names  
 
 =render "welcome/sidebar"

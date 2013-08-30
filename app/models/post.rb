@@ -17,7 +17,7 @@ class Post < ActiveRecord::Base
   def assign_tags
     if @tag_names
       self.tags = @tag_names.split(/\s+/).map do |name|
-        Tag.find_or_create_by_name(name)
+        Tag.find_or_create_by_name(name.strip)
       end
     end
   end
