@@ -1,6 +1,9 @@
 class WelcomeController < ApplicationController
   def index
-    @posts = Post.order('created_at DESC')
-    @recent_posts = @posts.limit(5)
+    if params[:tag]
+      @posts = Post.tagged(params[:tag])
+    else
+      @posts = Post.all.order('created_at DESC')
+    end
   end
 end
