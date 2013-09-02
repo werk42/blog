@@ -5,7 +5,7 @@ Cwblog::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  get 'tags/:tag', to: 'index#show', as: :tag
+  get 'tags/:tag', to: 'posts#index', as: :tag
 
   root 'welcome#index', :as => :home
 

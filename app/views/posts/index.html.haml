@@ -1,0 +1,13 @@
+.posts-container
+  - @posts.each do |post|
+    %li 
+      .title= post.title
+      .content= raw post.body
+      .date
+        %b published: 
+        = post.created_at.strftime('%d %B, %Y')
+      .tag
+        %b tags: 
+        = raw post.tags.map(&:name).map { |t| link_to t, tag_path(t)}.join(', ')
+
+=render "welcome/sidebar"
