@@ -8,6 +8,6 @@
         = post.created_at.strftime('%d %B, %Y')
       .tag
         %b tags: 
-        = post.tag_names
+        = raw post.tags.map(&:name).map { |t| link_to t, tag_path(t)}.join(', ')
 
 =render "sidebar"

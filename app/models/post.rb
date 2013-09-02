@@ -7,6 +7,9 @@ class Post < ActiveRecord::Base
   has_many :taggings, :dependent => :destroy
   has_many :tags, :through => :taggings
 
+  def self.tagged(name)
+    Tag.find_by_name!(name).posts
+  end
 
   def tag_names
     @tag_names || tags.map(&:name).join(' ') 
