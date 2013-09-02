@@ -4,8 +4,8 @@ class Post < ActiveRecord::Base
   after_save :assign_tags
 
   
-  has_many :taggings, :dependent => :destroy
-  has_many :tags, :through => :taggings
+  has_many :taggings, dependent: :destroy
+  has_many :tags, through: :taggings
 
   def self.tagged(name)
     Tag.find_by_name!(name).posts

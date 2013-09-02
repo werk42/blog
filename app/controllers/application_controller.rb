@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   before_filter :sidebar
 
   def sidebar
-    @archived_posts = Post.find(:all, :id, :order => 'created_at DESC').group_by { |post| post.created_at.strftime("%B %Y")}
+    @archived_posts = Post.find(:all, :id, order: 'created_at DESC').group_by { |post| post.created_at.strftime("%B %Y")}
   end
 end
