@@ -1,8 +1,7 @@
 class Tag < ActiveRecord::Base
-
-  validates :name, :presence true
-
   attr_accessible :name
+
+  validates :name, presence: true
 
   has_many :taggings
   has_many :posts, through: :taggings
