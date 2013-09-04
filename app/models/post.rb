@@ -1,4 +1,8 @@
 class Post < ActiveRecord::Base
+
+  validates :title, :presence true
+  validates :body, :presence true
+
 	attr_accessible :title, :body, :tag_names
   attr_accessor :tag_names
   after_save :assign_tags
